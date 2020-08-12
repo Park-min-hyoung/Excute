@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      * {
+        margin: 0; padding: 0;
+      }
+      li {
+        list-style: none;
+      }
+      img {
+        width: 400px; height: 400px;
+      }
+      .slide_wrapper {
+        position: relative;
+        width: 1280px;
+        height: 400px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+      .slides {
+        position: absolute;
+        top:0; left:0;
+        transition: left 0.5s ease-out;
+      }
+      .slides li:not(:last-child) {
+        float: left;
+        margin-right: 40px;
+      }
+      .controls {
+        text-align: center;
+        margin-top: 50px;
+      }
+      .controls span {
+        background: #333;
+        color: #fff;
+        padding: 10px 20px;
+        margin: 0 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide_wrapper">
+      <ul class="slides">
+        <li><img src="moon.jpg"" alt=""></li>
+        <li><img src="moon.jpg"" alt=""></li>
+        <li><img src="moon.jpg"" alt=""></li>
+        <li><img src="moon.jpg"" alt=""></li>
+        <li><img src="moon.jpg"" alt=""></li>
+        <li><img src="moon.jpg"" alt=""></li>
+        <li><img src="moon.jpg"" alt=""></li>
+        <li><img src="moon.jpg"" alt=""></li>
+        <li><img src="moon.jpg"" alt=""></li>
+        <li><img src="moon.jpg"" alt=""></li>
+      </ul>
+    </div>
+    <p class="controls">
+      <span class="prev">prev</span>
+      <span class="next">next</span>
+    </p>
+    <script type="text/javascript">
+      var slides = document.querySelector('.slides'),
+          slide = document.querySelectorAll('.slides li'),
+          slideStatus = 0,
+          slideSize = slide.length,
+          slideWidth = 400,
+          slideMargin = 40,
+          prevBtn = document.querySelector('.prev'),
+          nextBtn = document.querySelector('.next');
+
+          slides.style.width = (slideWidth + slideMargin) * slideSize - slideMargin + 'px';
+
+          function moveSlide(num) {
+            slides.style.left = -num * 440 + 'px';
+            slideStatus = num;
+          }
+          nextBtn.addEventListener('click', function(){
+            if(slideStatus < slideSize - 3)
+              moveSlide(slideStatus + 1);
+            else{
+              moveSlide(0);
+            }
+          });
+          prevBtn.addEventListener('click', function(){
+            if(slideStatus > 0)
+              moveSlide(slideStatus - 1);
+            else{
+              moveSlide(slideSize - 3);
+            }
+          });
+
+    </script>
+  </body>
+</html>

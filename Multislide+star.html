@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>BHC</title>
+    <style>
+      * {
+        padding: 0; margin: 0;
+      }
+      li {
+        list-style: none;
+      }
+      img {
+        width: 300px; height: 300px;
+      }
+      .slide_wrapper {
+        position: relative;
+        width: 1000px;
+        height: 300px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+      .slides {
+        position: absolute;
+        top:0; left:0;
+        transition: left 0.5s ease-out;
+      }
+      .controls {
+        text-align: center;
+      }
+      .slides li:not(:last-child) {
+        float: left;
+        margin-right: 30px;
+      }
+      .controls span {
+        position: absolute;
+        background: #333;
+        color: #fff;
+        padding: 10px 15px;
+        margin: 0 10px;
+        cursor: pointer;
+        top: 100%;
+        transform: translateY(-100%);
+      }
+      .controls span.prev{
+        right:calc(100% - 60px);
+      }
+      .controls span.next{
+        left:calc(100% - 60px);
+      }
+      .restaurantname {
+        position: relative;
+        margin-top: 50px;
+        text-align: center;
+      }
+      .restaurantname .star {
+        width: 200px;
+        background: url(../../foodimage/star1.png)no-repeat;
+      }
+      .restaurantname .star, .restaurantname .star span {
+        display: inline-block;
+        height: 38px;
+        overflow: hidden;
+      }
+      .restaurantname .star span {
+        background: url(../../foodimage/star2.png)no-repeat;
+        background-position: left bottom;
+        line-height: 0; q
+        vertical-align: top;
+        float: left;
+      }
+      .restaurantname .score {
+        position: absolute;
+        top: 65%;
+        left: 56.5%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide_wrapper">
+      <ul class="slides">
+        <li><img src="../../foodimage/뿌링클.jpg"></li>
+        <li><img src="../../foodimage/맛초킹.jpg"></li>
+        <li><img src="../../foodimage/골드킹.jpg"></li>
+        <li><img src="../../foodimage/뿌링클.jpg"></li>
+        <li><img src="../../foodimage/맛초킹.jpg"></li>
+        <li><img src="../../foodimage/골드킹.jpg"></li>
+      </ul>
+      <p class="controls">
+        <span class="prev"><</span>
+        <span class="next">></span>
+      </p>
+    </div>
+    <div class="restaurantname">
+      <div class="name" style="font-size:40px;">BHC</div>
+      <span class="star">
+        <span style="width:90%;"></span>
+      </span>
+      <div class="score">4.75점</p>
+      <div class="review"></div>
+    </div>
+    <script type="text/javascript">
+      var slides = document.querySelector('.slides'),
+          slide = document.querySelectorAll('.slides li'),
+          statusNumber = 0,
+          slideSize = slide.length,
+          slideWidth = 300,
+          slideMargin = 30,
+          prevBtn = document.querySelector('.prev'),
+          nextBtn = document.querySelector('.next');
+
+          slides.style.width = (slideWidth + slideMargin) * slideSize - slideMargin + 'px';
+
+          function moveSlide(num) {
+            slides.style.left = -num * 330 + 'px';
+            statusNumber = num;
+          }
+          prevBtn.addEventListener('click', function(){
+            if(statusNumber > 0){
+              moveSlide(statusNumber - 1);
+            }
+            else{
+              moveSlide(slideSize - 3);
+            }
+          });
+          nextBtn.addEventListener('click', function(){
+            if(statusNumber < slideSize - 3){
+              moveSlide(statusNumber + 1);
+            }
+            else{
+              moveSlide(0);
+            }
+          });
+    </script>
+  </body>
+</html>

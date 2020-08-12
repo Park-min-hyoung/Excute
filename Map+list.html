@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>Chicken</title>
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=vfai1islqr"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
+    <style>
+      ul.chicken {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+
+        max-width: 100%;
+        width: 100%;
+      }
+      ul.chicken a {
+        text-decoration: none;
+        color: black;
+      }
+      li.chickenname {
+        padding: 5px 5px 100px 5px;
+        margin-bottom: 5px;
+        border-bottom: 1px solid black;
+        font-family: 'Nanum Brush Script', cursive;
+        font-size: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s linear;
+      }
+      ul.chicken li:last-child {
+        border-bottom: 0px;
+      }
+      ul.chicken li:hover {
+        background-color: #f6f6f6;
+      }
+      li.chickenname div.cn{
+        font-size: 35px;
+        display: inline;
+      }
+      li.chickenname img {
+        width:130px;
+        height:130px;
+        float: right;
+      }
+    </style>
+</head>
+<body>
+  <div id="map" style="width:100%;height:400px;"></div>
+
+  <script>
+    var map = new naver.maps.Map('map', {
+        center: new naver.maps.LatLng(35.2481925, 128.909423),
+        zoom: 16
+    });
+
+    makeMarker(map, new naver.maps.LatLng(35.2481925, 128.909423), 0);
+    makeMarker(map, new naver.maps.LatLng(35.2484526, 128.9098512), 1);
+    makeMarker(map, new naver.maps.LatLng(35.2501829, 128.9082986), 2);
+
+    function makeMarker(map, position, index) {
+
+        var ICON_GAP = 31;
+        var ICON_SPRITE_IMAGE_URL ='/img/example/sp_pin_hd.png';
+        var iconSpritePositionX = (index * ICON_GAP) + 1;
+        var iconSpritePositionY = 1;
+
+        var marker = new naver.maps.Marker({
+            map: map,
+            position: position,
+            icon: {
+              url: ICON_SPRITE_IMAGE_URL,
+              size: new naver.maps.Size(26, 36), // 이미지 크기
+              origin: new naver.maps.Point(iconSpritePositionX, iconSpritePositionY), // 스프라이트 이미지에서 클리핑 위치
+              anchor: new naver.maps.Point(13, 36), // 지도상 위치에서 이미지 위치의 offset값
+              scaledSize: new naver.maps.Size(395, 79)
+            }
+        });
+        return marker;
+    }
+  </script>
+  <ul class="chicken">
+    <li class="chickenname"><a href="restaurant/BHC.html"><div class="cn">BHC</div><img src="../foodimage/chicken.png" alt="사진이 깨졌습니다."></a><br>
+    경상남도 김해시 삼방동 688-11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BHC는 누구나 즐겁게 즐 길수 있는 치킨문화공간을 선도합니다</li>
+    <li class="chickenname"><a href="#"><div class="cn">푸라닭</div><img src="../foodimage/chicken.png" alt="사진이 깨졌습니다."></a></li>
+    <li class="chickenname"><a href="#"><div class="cn">교촌치킨</div><img src="../foodimage/chicken.png" alt="사진이 깨졌습니다."></a></li>
+  </ul>
+</body>
+</html>

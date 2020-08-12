@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excute</title>
+    <link rel="stylesheet" href="CSS/Singleslide.css">
+  </head>
+  <body>
+    <ul class="top-nav">
+      <li><a href="#">채용 공고</a></li>
+      <li><a href="#">Adevertise</a></li>
+      <li><a href="#">Create</a></li>
+      <li><a href="#">회사 소개</a></li>
+    </ul>
+    <ul class="slides">
+      <input type="radio" name="radio-img" id="img-1" checked />
+      <li class="slide-container">
+        <div class="slide">
+          <img src="http://farm9.staticflickr.com/8072/8346734966_f9cd7d0941_z.jpg" />
+        </div>
+        <div class="nav">
+          <label for="img-6" class="prev">&#x2039;</label>
+          <label for="img-2" class="next">&#x203a;</label>
+        </div>
+      </li>
+
+      <input type="radio" name="radio-img" id="img-2" />
+      <li class="slide-container">
+        <div class="slide">
+          <img src="http://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg" />
+        </div>
+        <div class="nav">
+          <label for="img-1" class="prev">&#x2039;</label>
+          <label for="img-3" class="next">&#x203a;</label>
+        </div>
+      </li>
+
+      <input type="radio" name="radio-img" id="img-3" />
+      <li class="slide-container">
+        <div class="slide">
+          <img src="http://farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg" />
+        </div>
+        <div class="nav">
+          <label for="img-2" class="prev">&#x2039;</label>
+          <label for="img-4" class="next">&#x203a;</label>
+        </div>
+      </li>
+
+      <input type="radio" name="radio-img" id="img-4" />
+      <li class="slide-container">
+        <div class="slide">
+          <img src="http://farm9.staticflickr.com/8055/8098750623_66292a35c0_z.jpg" />
+        </div>
+        <div class="nav">
+          <label for="img-3" class="prev">&#x2039;</label>
+          <label for="img-5" class="next">&#x203a;</label>
+        </div>
+      </li>
+
+      <input type="radio" name="radio-img" id="img-5" />
+      <li class="slide-container">
+        <div class="slide">
+          <img src="http://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg" />
+        </div>
+        <div class="nav">
+          <label for="img-4" class="prev">&#x2039;</label>
+          <label for="img-6" class="next">&#x203a;</label>
+        </div>
+      </li>
+
+      <input type="radio" name="radio-img" id="img-6" />
+      <li class="slide-container">
+        <div class="slide">
+          <img src="http://farm9.staticflickr.com/8195/8098750703_797e102da2_z.jpg" />
+        </div>
+        <div class="nav">
+          <label for="img-5" class="prev">&#x2039;</label>
+          <label for="img-1" class="next">&#x203a;</label>
+        </div>
+      </li>
+
+      <li class="nav-dots">
+        <label for="img-1" class="nav-dot" id="dot-1"></label>
+        <label for="img-2" class="nav-dot" id="dot-2"></label>
+        <label for="img-3" class="nav-dot" id="dot-3"></label>
+        <label for="img-4" class="nav-dot" id="dot-4"></label>
+        <label for="img-5" class="nav-dot" id="dot-5"></label>
+        <label for="img-6" class="nav-dot" id="dot-6"></label>
+      </li>
+    </ul>
+    <div class="create">
+      <h1>여러분이 원하는 Create를 Pick하세요</h1>
+      <div class="create-pick">
+        <ul>
+          <li id="first-pick"><span onclick="selectImg(1)">전체</span></li>
+          <li><span onclick="selectImg(2)">게임</span></li>
+          <li><span onclick="selectImg(3)">키즈</span></li>
+          <li><span onclick="selectImg(4)">먹방</span></li>
+          <li><span onclick="selectImg(5)">예능</span></li>
+        </ul>
+      </div>
+      <div class="creators" id="creators-display">
+        <div id="all">
+          <div class="creator">
+            <div class="creator-char">
+              <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8072/8346734966_f9cd7d0941_z.jpg" /></a>
+              <div class="creator-name">Park</div>
+              <div class="creator-field">Food</div>
+            </div>
+            <div class="creator-subscribe">
+              <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+              2M
+            </div>
+          </div>
+
+          <div class="creator">
+            <div class="creator-char">
+              <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8072/8346734966_f9cd7d0941_z.jpg" /></a>
+              <div class="creator-name">Park</div>
+              <div class="creator-field">Food</div>
+            </div>
+            <div class="creator-subscribe">
+              <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+              2M
+            </div>
+          </div>
+
+          <div class="creator">
+            <div class="creator-char">
+              <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8072/8346734966_f9cd7d0941_z.jpg" /></a>
+              <div class="creator-name">Park</div>
+              <div class="creator-field">Food</div>
+            </div>
+            <div class="creator-subscribe">
+              <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+              2M
+            </div>
+          </div>
+
+          <div class="creator" id="last-img">
+            <div class="creator-char">
+              <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8072/8346734966_f9cd7d0941_z.jpg" /></a>
+              <div class="creator-name">Park</div>
+              <div class="creator-field">Food</div>
+            </div>
+            <div class="creator-subscribe">
+              <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+              2M
+            </div>
+          </div>
+
+          <div class="creator">
+            <div class="creator-char">
+              <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8072/8346734966_f9cd7d0941_z.jpg" /></a>
+              <div class="creator-name">Park</div>
+              <div class="creator-field">Food</div>
+            </div>
+            <div class="creator-subscribe">
+              <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+              2M
+            </div>
+          </div>
+
+          <div class="creator">
+            <div class="creator-char">
+              <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8072/8346734966_f9cd7d0941_z.jpg" /></a>
+              <div class="creator-name">Park</div>
+              <div class="creator-field">Food</div>
+            </div>
+            <div class="creator-subscribe">
+              <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+              2M
+            </div>
+          </div>
+
+          <div class="creator">
+            <div class="creator-char">
+              <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8072/8346734966_f9cd7d0941_z.jpg" /></a>
+              <div class="creator-name">Park</div>
+              <div class="creator-field">Food</div>
+            </div>
+            <div class="creator-subscribe">
+              <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+              2M
+            </div>
+          </div>
+
+          <div class="creator" id="last-img">
+            <div class="creator-char">
+              <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8072/8346734966_f9cd7d0941_z.jpg" /></a>
+              <div class="creator-name">Park</div>
+              <div class="creator-field">Food</div>
+            </div>
+            <div class="creator-subscribe">
+              <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+              2M
+            </div>
+          </div>
+        </div>
+
+        <div id="game">
+            <div class="creator">
+              <div class="creator-char">
+                <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg" /></a>
+                <div class="creator-name">Park</div>
+                <div class="creator-field">Food</div>
+              </div>
+              <div class="creator-subscribe">
+                <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+                2M
+              </div>
+            </div>
+
+            <div class="creator">
+              <div class="creator-char">
+                <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg" /></a>
+                <div class="creator-name">Park</div>
+                <div class="creator-field">Food</div>
+              </div>
+              <div class="creator-subscribe">
+                <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+                2M
+              </div>
+            </div>
+
+            <div class="creator">
+              <div class="creator-char">
+                <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg" /></a>
+                <div class="creator-name">Park</div>
+                <div class="creator-field">Food</div>
+              </div>
+              <div class="creator-subscribe">
+                <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+                2M
+              </div>
+            </div>
+
+            <div class="creator" id="last-img">
+              <div class="creator-char">
+                <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg" /></a>
+                <div class="creator-name">Park</div>
+                <div class="creator-field">Food</div>
+              </div>
+              <div class="creator-subscribe">
+                <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+                2M
+              </div>
+            </div>
+
+            <div class="creator">
+              <div class="creator-char">
+                <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg" /></a>
+                <div class="creator-name">Park</div>
+                <div class="creator-field">Food</div>
+              </div>
+              <div class="creator-subscribe">
+                <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+                2M
+              </div>
+            </div>
+
+            <div class="creator">
+              <div class="creator-char">
+                <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg" /></a>
+                <div class="creator-name">Park</div>
+                <div class="creator-field">Food</div>
+              </div>
+              <div class="creator-subscribe">
+                <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+                2M
+              </div>
+            </div>
+
+            <div class="creator">
+              <div class="creator-char">
+                <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg" /></a>
+                <div class="creator-name">Park</div>
+                <div class="creator-field">Food</div>
+              </div>
+              <div class="creator-subscribe">
+                <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+                2M
+              </div>
+            </div>
+
+            <div class="creator" id="last-img">
+              <div class="creator-char">
+                <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg" /></a>
+                <div class="creator-name">Park</div>
+                <div class="creator-field">Food</div>
+              </div>
+              <div class="creator-subscribe">
+                <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+                2M
+              </div>
+            </div>
+        </div>
+
+        <div id="kids">
+          <div class="creator">
+            <div class="creator-char">
+              <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg" /></a>
+              <div class="creator-name">Park</div>
+              <div class="creator-field">Food</div>
+            </div>
+            <div class="creator-subscribe">
+              <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+              2M
+            </div>
+          </div>
+
+            <div class="creator">
+              <div class="creator-char">
+                <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg" /></a>
+                <div class="creator-name">Park</div>
+                <div class="creator-field">Food</div>
+              </div>
+              <div class="creator-subscribe">
+                <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+                2M
+              </div>
+            </div>
+
+            <div class="creator">
+              <div class="creator-char">
+                <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg" /></a>
+                <div class="creator-name">Park</div>
+                <div class="creator-field">Food</div>
+              </div>
+              <div class="creator-subscribe">
+                <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+                2M
+              </div>
+            </div>
+
+            <div class="creator" id="last-img">
+              <div class="creator-char">
+                <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg" /></a>
+                <div class="creator-name">Park</div>
+                <div class="creator-field">Food</div>
+              </div>
+              <div class="creator-subscribe">
+                <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+                2M
+              </div>
+            </div>
+
+            <div class="creator">
+              <div class="creator-char">
+                <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg" /></a>
+                <div class="creator-name">Park</div>
+                <div class="creator-field">Food</div>
+              </div>
+              <div class="creator-subscribe">
+                <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+                2M
+              </div>
+            </div>
+
+              <div class="creator">
+                <div class="creator-char">
+                  <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg" /></a>
+                  <div class="creator-name">Park</div>
+                  <div class="creator-field">Food</div>
+                </div>
+                <div class="creator-subscribe">
+                  <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+                  2M
+                </div>
+              </div>
+
+              <div class="creator">
+                <div class="creator-char">
+                  <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg" /></a>
+                  <div class="creator-name">Park</div>
+                  <div class="creator-field">Food</div>
+                </div>
+                <div class="creator-subscribe">
+                  <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+                  2M
+                </div>
+              </div>
+
+              <div class="creator" id="last-img">
+                <div class="creator-char">
+                  <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg" /></a>
+                  <div class="creator-name">Park</div>
+                  <div class="creator-field">Food</div>
+                </div>
+                <div class="creator-subscribe">
+                  <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+                  2M
+                </div>
+              </div>
+        </div>
+
+        <div id="food">
+            <div class="creator">
+              <div class="creator-char">
+                <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8055/8098750623_66292a35c0_z.jpg" /></a>
+                <div class="creator-name">Park</div>
+                <div class="creator-field">Food</div>
+              </div>
+              <div class="creator-subscribe">
+                <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+                2M
+              </div>
+            </div>
+
+            <div class="creator">
+              <div class="creator-char">
+                <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8055/8098750623_66292a35c0_z.jpg" /></a>
+                <div class="creator-name">Park</div>
+                <div class="creator-field">Food</div>
+              </div>
+              <div class="creator-subscribe">
+                <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+                2M
+              </div>
+            </div>
+
+            <div class="creator">
+              <div class="creator-char">
+                <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8055/8098750623_66292a35c0_z.jpg" /></a>
+                <div class="creator-name">Park</div>
+                <div class="creator-field">Food</div>
+              </div>
+              <div class="creator-subscribe">
+                <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+                2M
+              </div>
+            </div>
+
+            <div class="creator" id="last-img">
+              <div class="creator-char">
+                <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8055/8098750623_66292a35c0_z.jpg" /></a>
+                <div class="creator-name">Park</div>
+                <div class="creator-field">Food</div>
+              </div>
+              <div class="creator-subscribe">
+                <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+                2M
+              </div>
+            </div>
+
+            <div class="creator">
+              <div class="creator-char">
+                <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8055/8098750623_66292a35c0_z.jpg" /></a>
+                <div class="creator-name">Park</div>
+                <div class="creator-field">Food</div>
+              </div>
+              <div class="creator-subscribe">
+                <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+                2M
+              </div>
+            </div>
+
+            <div class="creator">
+              <div class="creator-char">
+                <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8055/8098750623_66292a35c0_z.jpg" /></a>
+                <div class="creator-name">Park</div>
+                <div class="creator-field">Food</div>
+              </div>
+              <div class="creator-subscribe">
+                <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+                2M
+              </div>
+            </div>
+
+            <div class="creator">
+              <div class="creator-char">
+                <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8055/8098750623_66292a35c0_z.jpg" /></a>
+                <div class="creator-name">Park</div>
+                <div class="creator-field">Food</div>
+              </div>
+              <div class="creator-subscribe">
+                <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+                2M
+              </div>
+            </div>
+
+            <div class="creator" id="last-img">
+              <div class="creator-char">
+                <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8055/8098750623_66292a35c0_z.jpg" /></a>
+                <div class="creator-name">Park</div>
+                <div class="creator-field">Food</div>
+              </div>
+              <div class="creator-subscribe">
+                <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+                2M
+              </div>
+            </div>
+        </div>
+
+        <div id="entertainment">
+            <div class="creator">
+              <div class="creator-char">
+                <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg" /></a>
+                <div class="creator-name">Park</div>
+                <div class="creator-field">Food</div>
+              </div>
+              <div class="creator-subscribe">
+                <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+                2M
+              </div>
+            </div>
+
+            <div class="creator">
+              <div class="creator-char">
+                <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg" /></a>
+                <div class="creator-name">Park</div>
+                <div class="creator-field">Food</div>
+              </div>
+              <div class="creator-subscribe">
+                <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+                2M
+              </div>
+            </div>
+
+            <div class="creator">
+              <div class="creator-char">
+                <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg" /></a>
+                <div class="creator-name">Park</div>
+                <div class="creator-field">Food</div>
+              </div>
+              <div class="creator-subscribe">
+                <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+                2M
+              </div>
+            </div>
+
+            <div class="creator" id="last-img">
+              <div class="creator-char">
+                <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg" /></a>
+                <div class="creator-name">Park</div>
+                <div class="creator-field">Food</div>
+              </div>
+              <div class="creator-subscribe">
+                <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+                2M
+              </div>
+            </div>
+
+            <div class="creator">
+              <div class="creator-char">
+                <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg" /></a>
+                <div class="creator-name">Park</div>
+                <div class="creator-field">Food</div>
+              </div>
+              <div class="creator-subscribe">
+                <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+                2M
+              </div>
+            </div>
+
+            <div class="creator">
+              <div class="creator-char">
+                <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg" /></a>
+                <div class="creator-name">Park</div>
+                <div class="creator-field">Food</div>
+              </div>
+              <div class="creator-subscribe">
+                <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+                2M
+              </div>
+            </div>
+
+            <div class="creator">
+              <div class="creator-char">
+                <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg" /></a>
+                <div class="creator-name">Park</div>
+                <div class="creator-field">Food</div>
+              </div>
+              <div class="creator-subscribe">
+                <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+                2M
+              </div>
+            </div>
+
+            <div class="creator" id="last-img">
+              <div class="creator-char">
+                <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg" /></a>
+                <div class="creator-name">Park</div>
+                <div class="creator-field">Food</div>
+              </div>
+              <div class="creator-subscribe">
+                <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+                2M
+              </div>
+            </div>
+        </div>
+      </div>
+
+      <div id="plus-page">
+        <div id ='plus-image' style="display: none; height: 800px;">
+            <div class="creator">
+              <div class="creator-char">
+                <a href="#"><img class="create-img" id="p1" src="http://farm9.staticflickr.com/8072/8346734966_f9cd7d0941_z.jpg" /></a>
+                <div class="creator-name">Park</div>
+                <div class="creator-field">Food</div>
+              </div>
+              <div class="creator-subscribe">
+                <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+                2M
+              </div>
+            </div>
+
+            <div class="creator">
+              <div class="creator-char">
+                <a href="#"><img class="create-img" id="p2" src="http://farm9.staticflickr.com/8072/8346734966_f9cd7d0941_z.jpg" /></a>
+                <div class="creator-name">Park</div>
+                <div class="creator-field">Food</div>
+              </div>
+              <div class="creator-subscribe">
+                <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+                2M
+              </div>
+            </div>
+
+            <div class="creator">
+              <div class="creator-char">
+                <a href="#"><img class="create-img" id="p3"src="http://farm9.staticflickr.com/8072/8346734966_f9cd7d0941_z.jpg" /></a>
+                <div class="creator-name">Park</div>
+                <div class="creator-field">Food</div>
+              </div>
+              <div class="creator-subscribe">
+                <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+                2M
+              </div>
+            </div>
+
+            <div class="creator" id="last-img">
+              <div class="creator-char">
+                <a href="#"><img class="create-img" id="p4" src="http://farm9.staticflickr.com/8072/8346734966_f9cd7d0941_z.jpg" /></a>
+                <div class="creator-name">Park</div>
+                <div class="creator-field">Food</div>
+              </div>
+              <div class="creator-subscribe">
+                <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+                2M
+              </div>
+            </div>
+
+            <div class="creator">
+              <div class="creator-char">
+                <a href="#"><img class="create-img" id="p5" src="http://farm9.staticflickr.com/8072/8346734966_f9cd7d0941_z.jpg" /></a>
+                <div class="creator-name">Park</div>
+                <div class="creator-field">Food</div>
+              </div>
+              <div class="creator-subscribe">
+                <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+                2M
+              </div>
+            </div>
+
+            <div class="creator">
+              <div class="creator-char">
+                <a href="#"><img class="create-img" id="p6" src="http://farm9.staticflickr.com/8072/8346734966_f9cd7d0941_z.jpg" /></a>
+                <div class="creator-name">Park</div>
+                <div class="creator-field">Food</div>
+              </div>
+              <div class="creator-subscribe">
+                <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+                2M
+              </div>
+            </div>
+
+            <div class="creator">
+              <div class="creator-char">
+                <a href="#"><img class="create-img" id="p7" src="http://farm9.staticflickr.com/8072/8346734966_f9cd7d0941_z.jpg" /></a>
+                <div class="creator-name">Park</div>
+                <div class="creator-field">Food</div>
+              </div>
+              <div class="creator-subscribe">
+                <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+                2M
+              </div>
+            </div>
+
+            <div class="creator" id="last-img">
+              <div class="creator-char">
+                <a href="#"><img class="create-img" id="p8" src="http://farm9.staticflickr.com/8072/8346734966_f9cd7d0941_z.jpg" /></a>
+                <div class="creator-name">Park</div>
+                <div class="creator-field">Food</div>
+              </div>
+              <div class="creator-subscribe">
+                <img src="https://www.collabkorea.com/collab/icons/creator/subs.svg">
+                2M
+              </div>
+            </div>
+        </div>
+        <input id="plus-comment" value="더 보기" onclick="
+        if(this.parentNode.getElementsByTagName('div')[0].style.display != 'block') {
+          this.parentNode.getElementsByTagName('div')[0].style.display = 'block';
+          this.value = '숨기기';
+        }
+        else {
+          this.parentNode.getElementsByTagName('div')[0].style.display = 'none';
+          this.value = '더 보기';
+        }" type="button" />
+      </div>
+    </div>
+    <script type="text/javascript">
+      var pass = document.getElementById('all');
+      function selectImg(number) {
+        pass.style.display = "none";
+        document.getElementById('plus-image').style.display = "none";
+        document.getElementById('plus-comment').value = '더 보기';
+        if(number == 1){
+          pass = document.getElementById('all');
+          document.getElementById('p1').src = "http://farm9.staticflickr.com/8072/8346734966_f9cd7d0941_z.jpg";
+          document.getElementById('p2').src = "http://farm9.staticflickr.com/8072/8346734966_f9cd7d0941_z.jpg";
+          document.getElementById('p3').src = "http://farm9.staticflickr.com/8072/8346734966_f9cd7d0941_z.jpg";
+          document.getElementById('p4').src = "http://farm9.staticflickr.com/8072/8346734966_f9cd7d0941_z.jpg";
+          document.getElementById('p5').src = "http://farm9.staticflickr.com/8072/8346734966_f9cd7d0941_z.jpg";
+          document.getElementById('p6').src = "http://farm9.staticflickr.com/8072/8346734966_f9cd7d0941_z.jpg";
+          document.getElementById('p7').src = "http://farm9.staticflickr.com/8072/8346734966_f9cd7d0941_z.jpg";
+          document.getElementById('p8').src = "http://farm9.staticflickr.com/8072/8346734966_f9cd7d0941_z.jpg";
+        }
+        else if(number == 2){
+          pass = document.getElementById('game');
+          document.getElementById('p1').src = "http://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg";
+          document.getElementById('p2').src = "http://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg";
+          document.getElementById('p3').src = "http://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg";
+          document.getElementById('p4').src = "http://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg";
+          document.getElementById('p5').src = "http://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg";
+          document.getElementById('p6').src = "http://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg";
+          document.getElementById('p7').src = "http://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg";
+          document.getElementById('p8').src = "http://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg";
+        }
+        else if(number == 3){
+          pass = document.getElementById('kids');
+          document.getElementById('p1').src = "http://farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg";
+          document.getElementById('p2').src = "http://farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg";
+          document.getElementById('p3').src = "http://farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg";
+          document.getElementById('p4').src = "http://farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg";
+          document.getElementById('p5').src = "http://farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg";
+          document.getElementById('p6').src = "http://farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg";
+          document.getElementById('p7').src = "http://farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg";
+          document.getElementById('p8').src = "http://farm9.staticflickr.com/8068/8250438572_d1a5917072_z.jpg";
+        }
+        else if(number == 4){
+          pass = document.getElementById('food');
+          document.getElementById('p1').src = "http://farm9.staticflickr.com/8055/8098750623_66292a35c0_z.jpg";
+          document.getElementById('p2').src = "http://farm9.staticflickr.com/8055/8098750623_66292a35c0_z.jpg";
+          document.getElementById('p3').src = "http://farm9.staticflickr.com/8055/8098750623_66292a35c0_z.jpg";
+          document.getElementById('p4').src = "http://farm9.staticflickr.com/8055/8098750623_66292a35c0_z.jpg";
+          document.getElementById('p5').src = "http://farm9.staticflickr.com/8055/8098750623_66292a35c0_z.jpg";
+          document.getElementById('p6').src = "http://farm9.staticflickr.com/8055/8098750623_66292a35c0_z.jpg";
+          document.getElementById('p7').src = "http://farm9.staticflickr.com/8055/8098750623_66292a35c0_z.jpg";
+          document.getElementById('p8').src = "http://farm9.staticflickr.com/8055/8098750623_66292a35c0_z.jpg";
+        }
+        else {
+          pass = document.getElementById('entertainment');
+          document.getElementById('p1').src = "http://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg";
+          document.getElementById('p2').src = "http://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg";
+          document.getElementById('p3').src = "http://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg";
+          document.getElementById('p4').src = "http://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg";
+          document.getElementById('p5').src = "http://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg";
+          document.getElementById('p6').src = "http://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg";
+          document.getElementById('p7').src = "http://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg";
+          document.getElementById('p8').src = "http://farm9.staticflickr.com/8061/8237246833_54d8fa37f0_z.jpg";
+        }
+        pass.style.display = "block";
+      }
+    </script>
+    <div class="search">
+      <h1>원하는 Create를 검색해보세요</h1>
+      <form id="create-search" action="Excute.html" method="post">
+        <div class="search-wrap">
+          <div class="search-inner">
+            <input type="text" name="create-name" id="create-name" placeholder="크리에이터의 이름을 검색하세요">
+            <input type="text" id="temp" value="temp" style="display:none;">
+            <button type="button" class="search-button" onclick="
+            searchCreate();">검색</button>
+          </div>
+        </div>
+      </form>
+      <div class="search-creators-wrap" id="scw">
+        <ul class="search-creators">
+          <li class="search-creator" id="g1" value="1">
+            <div class="search-creator-char">
+              <div class="search-creator-img">
+                <img src="https://yt3.ggpht.com/a/AATXAJzK9WgQ68fNPZo_gSISZXUspGW-hDh5uciYqt4EPQ=s800-c-k-c0xffffffff-no-rj-mo" alt="">
+              </div>
+              <div class="search-creator-desc">
+                <div class="title" value="친절한 뷰티언니쏭냥">친절한 뷰티언니쏭냥</div>
+                <div class="count">
+                  <span>조회수</span>
+                  <span style="font-weight: 700;">30,000,000</span>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="search-creator">
+            <div class="search-creator-char">
+              <div class="search-creator-img">
+                <img src="https://yt3.ggpht.com/a/AATXAJzK9WgQ68fNPZo_gSISZXUspGW-hDh5uciYqt4EPQ=s800-c-k-c0xffffffff-no-rj-mo" alt="">
+              </div>
+              <div class="search-creator-desc">
+                <div class="title" value="친절한 뷰티언니쏭냥">UDT</div>
+                <div class="count">
+                  <span>조회수</span>
+                  <span style="font-weight: 700;">30,000,000</span>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="search-creator">
+            <div class="search-creator-char">
+              <div class="search-creator-img">
+                <img src="https://yt3.ggpht.com/a/AATXAJzK9WgQ68fNPZo_gSISZXUspGW-hDh5uciYqt4EPQ=s800-c-k-c0xffffffff-no-rj-mo" alt="">
+              </div>
+              <div class="search-creator-desc">
+                <div class="title" value="친절한 뷰티언니쏭냥">홍사운드</div>
+                <div class="count">
+                  <span>조회수</span>
+                  <span style="font-weight: 700;">30,000,000</span>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="search-creator" id="last-img">
+            <div class="search-creator-char">
+              <div class="search-creator-img">
+                <img src="https://yt3.ggpht.com/a/AATXAJzK9WgQ68fNPZo_gSISZXUspGW-hDh5uciYqt4EPQ=s800-c-k-c0xffffffff-no-rj-mo" alt="">
+              </div>
+              <div class="search-creator-desc">
+                <div class="title" value="친절한 뷰티언니쏭냥">박병진 용사</div>
+                <div class="count">
+                  <span>조회수</span>
+                  <span style="font-weight: 700;">30,000,000</span>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script type="text/javascript">
+    var k = document.querySelectorAll(".search-creator");
+    var name = document.getElementsByClassName("search-creator")[0].value;
+      function searchCreate() {
+        document.write(name);
+        var input = document.getElementById('create-name').value;
+        for(var i = 0; i < k.length; i++){
+          if(k[i].style.display == 'block' && k[i].value != '1') {
+            k[i].style.display = "none";
+          }
+          else {
+            k[i].style.display = "block";
+          }
+        }
+
+      }
+    </script>
+  </body>
+</html>
