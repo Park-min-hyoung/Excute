@@ -593,7 +593,7 @@
       </div>
 
       <div id="plus-page">
-        <div id ='plus-image' style="display: none; height: 800px;">
+        <div id ='plus-image' style="display: none;">
             <div class="creator">
               <div class="creator-char">
                 <a href="#"><img class="create-img" id="p1" src="http://farm9.staticflickr.com/8072/8346734966_f9cd7d0941_z.jpg" /></a>
@@ -779,13 +779,13 @@
       </form>
       <div class="search-creators-wrap" id="scw">
         <ul class="search-creators">
-          <li class="search-creator" id="g1" value="1">
+          <li class="search-creator" id="g1" value="111">
             <div class="search-creator-char">
               <div class="search-creator-img">
                 <img src="https://yt3.ggpht.com/a/AATXAJzK9WgQ68fNPZo_gSISZXUspGW-hDh5uciYqt4EPQ=s800-c-k-c0xffffffff-no-rj-mo" alt="">
               </div>
               <div class="search-creator-desc">
-                <div class="title" value="친절한 뷰티언니쏭냥">친절한 뷰티언니쏭냥</div>
+                <div class="title">친절한 뷰티언니쏭냥</div>
                 <div class="count">
                   <span>조회수</span>
                   <span style="font-weight: 700;">30,000,000</span>
@@ -797,10 +797,10 @@
           <li class="search-creator">
             <div class="search-creator-char">
               <div class="search-creator-img">
-                <img src="https://yt3.ggpht.com/a/AATXAJzK9WgQ68fNPZo_gSISZXUspGW-hDh5uciYqt4EPQ=s800-c-k-c0xffffffff-no-rj-mo" alt="">
+                <img src="https://yt3.ggpht.com/a/AATXAJxz7FnKL1vG_hpRcOSKANsdPkT3lhTQ4rKz7GeSsA=s900-c-k-c0xffffffff-no-rj-mo" alt="">
               </div>
               <div class="search-creator-desc">
-                <div class="title" value="친절한 뷰티언니쏭냥">UDT</div>
+                <div class="title">UDT</div>
                 <div class="count">
                   <span>조회수</span>
                   <span style="font-weight: 700;">30,000,000</span>
@@ -812,10 +812,10 @@
           <li class="search-creator">
             <div class="search-creator-char">
               <div class="search-creator-img">
-                <img src="https://yt3.ggpht.com/a/AATXAJzK9WgQ68fNPZo_gSISZXUspGW-hDh5uciYqt4EPQ=s800-c-k-c0xffffffff-no-rj-mo" alt="">
+                <img src="https://yt3.ggpht.com/a/AATXAJxZp3MCJOj1AlnW-L755sKcvzPCOHegS6wuOCNJCg=s900-c-k-c0xffffffff-no-rj-mo" alt="">
               </div>
               <div class="search-creator-desc">
-                <div class="title" value="친절한 뷰티언니쏭냥">홍사운드</div>
+                <div class="title">홍사운드</div>
                 <div class="count">
                   <span>조회수</span>
                   <span style="font-weight: 700;">30,000,000</span>
@@ -827,10 +827,10 @@
           <li class="search-creator" id="last-img">
             <div class="search-creator-char">
               <div class="search-creator-img">
-                <img src="https://yt3.ggpht.com/a/AATXAJzK9WgQ68fNPZo_gSISZXUspGW-hDh5uciYqt4EPQ=s800-c-k-c0xffffffff-no-rj-mo" alt="">
+                <img src="https://yt3.ggpht.com/a/AATXAJxu_3ceaYfDYEPKOp8-FIblb_SEuS1qWEOkXOAQGw=s176-c-k-c0x00ffffff-no-rj-mo" alt="">
               </div>
               <div class="search-creator-desc">
-                <div class="title" value="친절한 뷰티언니쏭냥">박병진 용사</div>
+                <div class="title">박병진 용사</div>
                 <div class="count">
                   <span>조회수</span>
                   <span style="font-weight: 700;">30,000,000</span>
@@ -843,20 +843,58 @@
     </div>
     <script type="text/javascript">
     var k = document.querySelectorAll(".search-creator");
-    var name = document.getElementsByClassName("search-creator")[0].value;
       function searchCreate() {
-        document.write(name);
         var input = document.getElementById('create-name').value;
         for(var i = 0; i < k.length; i++){
-          if(k[i].style.display == 'block' && k[i].value != '1') {
-            k[i].style.display = "none";
+          if((k[i].style.display == '' && document.querySelectorAll(".title")[i].innerHTML == input) || (k[i].style.display == 'none' && document.querySelectorAll(".title")[i].innerHTML == input)) {
+            k[i].style.display = '';
+          }
+          else if(input == '') {
+            k[i].style.display = '';
           }
           else {
-            k[i].style.display = "block";
+            k[i].style.display = "none";
           }
         }
-
       }
     </script>
+
+    <div class="foot">
+      <div class="container">
+        <div class="row1">
+          <div class="time"><h2>010-8309-9634</h2><h5>영업시간 : 09:00 ~ 18:00</h5><h5>점심시간 : 12:00 ~ 13:00</h5></div>
+          <div class="sns" style="text-align: center;"><h2>SNS</h2>
+            <div class="sns-img">
+              <a href="#"><img src="https://www.hiver.co.kr/static/2.48.3/images/icon_footer_03.png"></a><span>페이스북</span>&nbsp;&nbsp;&nbsp;
+              <a href="#"><img src="https://www.hiver.co.kr/static/2.48.3/images/icon_footer_04.png"></a>&nbsp;<span>인스타그램</span>&nbsp;&nbsp;&nbsp;
+              <a href="#"><img src="https://www.hiver.co.kr/static/2.48.3/images/icon_footer_02.png"></a>&nbsp;<span>카카오톡</span>
+            </div>
+          </div>
+          <div class="copyright" style="text-align: center;"><h2>Copyright © 2020</h2><h4>박민형</h4></div>
+        </div>
+
+        <hr>
+        <div class="row2">
+          <div class="introduce">
+            <div class="maker"><h1>NICE</h1></div>
+            <p>회사명 : ㈜NICE | 대표이사 : 박민형 | 호스팅사업자 : (주)NICE<br>
+            주소 : (06223) 울산 동구 화문로 70, 현대비치 105동 1601호<br>
+            개인정보관리책임자 : 박민형(qkralswgud1324@naver.com)<br><br>
+
+
+            법적고지<br>
+            (주)NICE는 결제정보의 중개서비스 또는 통신판매중개시스템의 제공자로서,<br>
+            통신판매의 당사자가 아니며 상품의 주문, 배송 및 환불 등과 관련한 의무와 책임은 각 판매자에게 있습니다.<br><br>
+
+            100%정품<br>
+            NICE에서 판매되는 모든 브랜드 제품은 정식제조, 정식수입원을 통해 유통되는 100%정품입니다.
+            </p>
+
+            <br><p style="color: #808080;">이용약관 ㅣ 개인정보처리방침 ㅣ 사업자정보확인</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
