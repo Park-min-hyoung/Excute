@@ -1,0 +1,56 @@
+/* 전체 영역을 통틀어서 스타일 정의 */
+@import url(http://fonts.googleepais.com/earlyaccess/nanumgothic.css);
+* {
+  font-family: 'Nanum Gothic';
+}
+a {
+  color: #000000;
+  text-decoration: none;
+}
+a: hover {
+  color: #bbbbbb;
+  text-decoration: none;
+  cursor: pointer
+}
+/* 네비게이션 영역*/
+.navbar-expand-lg .navbar-brand { /* 네비게이션 제목 색상 */
+  color: powderblue;
+}
+.navbar-expand-lg .navbar-brand:hover,
+.navbar-expand-lg .navbar-brand:focus { /* 네비게이션 제목에 마우스를 올렸을 때 */
+  background-color: transparent;
+  color: yellow;
+}
+.navbar-expand-lg .navbar-nav > .active > .nav-link,
+.navbar-expand-lg .navbar-nav > .active > .nav-link:hover,
+.navbar-expand-lg .navbar-nav > .active > .nav-link:focus { /* 현재 선택된 네비게이션 색상 이벤트 */
+  color: white;
+  background-color: #000000;
+}
+.navbar-expand-lg .navbar-nav > li > .nav-link:hover,
+.navbar-expand-lg .navbar-nav > li > .nav-link:focus { /* 네비게이션의 글자에 마우슬르 올렸을 때 */
+  color: #bbbbbb;
+}
+.navbar-expand-lg .navbar-nav > .open > .nav-link,
+.navbar-expand-lg .navbar-nav > .open > .nav-link:hover,
+.navbar-expand-lg .navbar-nav > .open > .nav-link:focus { /* 드럽다운이 열렸을 떄 마우스 색상 이벤트(안 됨) */
+  color: #000000;
+  background-color: #ffffff;
+  text-decoration: none;
+}
+.navbar-expand-lg .navbar-nav > li > .nav-link { /* 네비게이션 기본 색상 */
+  color: white;
+}
+@media (max-width: 767px) { /* 해상도가 작을 때 드랍다 아이템에 마우스를 올렸을 때(안 됨) */
+  .navbar-expand-lg .navbar-nav .open .dropdown-menu > a {
+    color: #ffffff;
+  }
+  .navbar-expand-lg .navbar-nav .open .dropdown-menu > a:hover,
+  .navbar-expand-lg .navbar-nav .open .dropdown-menu > a:focus {
+    color: #bbbbbb;
+  }
+}
+.media-left img {
+  width: 96px;
+  height: 96px;
+}

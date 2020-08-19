@@ -11,7 +11,7 @@ var Newimage = {
     document.getElementById('plus-image').style.display = char;
   },
   setImage4:function(char) {
-    document.getElementById('plus-comment').value = char;
+    document.getElementById('plus-comment').innerHTML = char;
   }
 }
 function selectImg(number) {
@@ -78,11 +78,11 @@ function selectImg(number) {
 function plusPage(self) {
   if(self.parentNode.getElementsByTagName('div')[0].style.display != '') {
     Newimage.setImage1(self,'');
-    self.value = '숨기기';
+    self.innerHTML = '숨기기';
   }
   else {
     Newimage.setImage1(self,'none');
-    self.value = '더 보기';
+    self.innerHTML = '더 보기';
   }
 }
 function searchCreate() {
