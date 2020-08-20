@@ -1,5 +1,7 @@
 var pass = document.getElementById('all');
-var k = document.querySelectorAll(".search-creator");
+var k = document.querySelectorAll("#search-creator");
+var error = document.getElementById('search-error');
+var count = 0;
 var Newimage = {
   setImage1:function(self, char){
     self.parentNode.getElementsByTagName('div')[0].style.display = char;
@@ -87,12 +89,20 @@ function plusPage(self) {
 }
 function searchCreate() {
   var input = document.getElementById('create-name').value;
+  count = 0;
   for(var i = 0; i < k.length; i++){
     if((k[i].style.display == '' && document.querySelectorAll(".title")[i].innerHTML == input) || (k[i].style.display == 'none' && document.querySelectorAll(".title")[i].innerHTML == input)) {
+      error.style.display = 'none';
+      count = 1;
       Newimage.setImage2('',i);
     }
     else if(input == '') {
+      error.style.display = 'none';
       Newimage.setImage2('',i);
+    }
+    else if(input != document.querySelectorAll(".title")[i].innerHTML && count == 0){
+      error.style.display = '';
+      Newimage.setImage2('none',i);
     }
     else {
       Newimage.setImage2('none',i);

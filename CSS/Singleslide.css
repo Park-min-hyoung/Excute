@@ -1,8 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Varela+Round);
 
-* {padding: 0; margin: 0; font-family: 'Black Han Sans', sans-serif;}
+* {padding: 0; margin: 0;}
 
-html, body {background: #333;}
+html, body {background: #333; font-family: 'Black Han Sans', sans-serif;}
 
 header {background: white;}
 
@@ -38,7 +38,7 @@ nav h1 {
 }
 .slides {
   padding: 0;
-  width: 100%;
+  width: 70%;
   height: 600px;
   display: block;
   margin: 0 auto;
@@ -154,12 +154,12 @@ input#img-6:checked ~ .nav-dots label#dot-6 {
   color: white;
   cursor: pointer;
 }
-.create-pick span:hover {
+.create-pick span:hover{
   text-decoration: underline;
 }
 .create .creators {
   width: 80%;
-  height: 770px;
+  height: 780px;
   margin: 0 auto;
   position: relative;
 }
@@ -176,8 +176,9 @@ input#img-6:checked ~ .nav-dots label#dot-6 {
   color: white;
   line-height: 30px;
   margin-right: 110px;
-  margin-top: 30px;
+  margin-top: 10px;
   text-align: center;
+  overflow: hidden;
 }
 #last-img {margin-right: 0;}
 .creator-char .create-img {
@@ -185,6 +186,21 @@ input#img-6:checked ~ .nav-dots label#dot-6 {
   height: 250px;
   border-radius: 100%;
 }
+.creator .creator-name,
+.creator .creator-field,
+.creator .creator-subscribe,
+.creator .creator-profile {
+  height: 30px;
+  letter-spacing: -1px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.creator-profile a {
+  color: white;
+  text-decoration: none;
+}
+
 #plus-page {
   text-align: center;
   margin: 0 auto;
@@ -216,22 +232,13 @@ input#img-6:checked ~ .nav-dots label#dot-6 {
     border-radius: 2px;
 }
 .search .search-creators-wrap {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
-}
-.search-creators {margin-top: 50px;}
-.search-creator {
-  width: 20%;
-  height: 25%;
-  list-style: none;
-  float: left;
-  margin-right: 77px;
+  padding-top: 50px;
 }
 .search-creator-char {
     position: relative;
-    border: 1px solid #e0e0e4;
     color: white;
-    box-sizing: border-box;
 }
 .search-creator-char .search-creator-img{
   width: 70%;
@@ -244,52 +251,36 @@ input#img-6:checked ~ .nav-dots label#dot-6 {
 }
 .search-creator-char .search-creator-desc{
   padding: 10px;
-  height: 66px;
+  height: 100px;
 }
 .search-creator-desc .title {
   text-align: center;
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 25px;
   letter-spacing: -1px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.search-creator-desc .count {text-align: center;}
-.foot {
-  width: 1903px;
-  background-color: black;
-  color: white;
-  margin-top: 500px;
+
+.search-creator-desc .count {
+  text-align: center;
+  font-size: 20px;
 }
-.foot .container {
-  width: 1100px;
-  margin: 0 auto;
-}
-.container .row1 {
+
+.container #r1 {
   padding-top: 30px; padding-bottom: 30px;
   text-align: center;
-}
-.time, .sns, .copyright {
-  display: inline-block;
-  padding-right: 25px; padding-left: 25px;
-  font-size: 20px;
 }
 .sns-img img{
   width: 40px;
   height: 40px;
 }
-.row2 .introduce {padding-top: 30px; padding-bottom: 30px;}
-.maker h1 {
-  text-align: center;
-  letter-spacing:20px;
-  float: right;
-}
+#r2 .introduce {padding-top: 30px; padding-bottom: 30px;}
 @media (min-width: 1880px) {
   #plus-image {height: 800px;}
 }
 @media (max-width: 1880px) {
-  .create .creators {height: 660px;}
+  .create .creators {height: 690px;}
   .creator {
     width: 25%;
     margin-right: 0;
@@ -298,7 +289,6 @@ input#img-6:checked ~ .nav-dots label#dot-6 {
     width: 80%;
     height: 200px;
   }
-  .search-creator {margin-right: 48px;}
 }
 @media (max-width: 1200px) {
   .slides {
@@ -311,9 +301,7 @@ input#img-6:checked ~ .nav-dots label#dot-6 {
     line-height: 450px;
   }
   .creator-char .create-img {height: 130px;}
-  .create .creators {height: 520px;}
-  .search-creator {margin-right: 30px;}
-  .search-creator-desc .title, .search-creator-desc .count {font-size: 14px;}
+  .create .creators {height: 550px;}
 }
 @media (max-width: 747px) {
   .slides {
@@ -326,12 +314,9 @@ input#img-6:checked ~ .nav-dots label#dot-6 {
     line-height: 300px;
   }
   .creator-char .create-img {height: 100px;}
-  .create .creators {height: 460px;}
-  .top-nav a {font-size: 18px;}
+  .create .creators {height: 490px;}
   .create h1, .search h1 {font-size: 25px;}
   .search-inner #create-name {width: 250px;}
-  .search-creator {margin-right: 20px;}
-  .search-creator-desc .title, .search-creator-desc .count {font-size: 12px;}
   .nav-item-divider span {display: none;}
   .nav-link i {display: none;}
   .d-xl-none {display: block; color: black;}
