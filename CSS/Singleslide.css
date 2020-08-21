@@ -1,4 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+@import url(https://fonts.googleapis.com/css?family=Varela+Round
+@import url(http://fonts.googleepais.com/earlyaccess/nanumgothic.css);
 
 * {padding: 0; margin: 0;}
 
@@ -22,16 +23,8 @@ header {background: white;}
 
 .dropdown-toggle:hover {cursor: pointer;}
 
-.mr-auto li {
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-.ml-auto li {
-  padding-left: 15px;
-  padding-right: 15px;
-}
 nav .star-create {margin: 25px 5%;}
+
 nav h1 {
   font-size: 30px;
   color: white;
@@ -79,7 +72,7 @@ nav h1 {
   color:white;
 }
 .nav label {
-  width: 200px;
+  width: 100px;
   height: 100%;
   display: none;
   position: absolute;
@@ -91,7 +84,7 @@ nav h1 {
   transition: opacity 0.2s;
 
   color: #FFF;
-  font-size: 156pt;
+  font-size: 120pt;
   text-align: center;
   line-height: 500px;
   font-family: "Varela Round", sans-serif;
@@ -267,6 +260,18 @@ input#img-6:checked ~ .nav-dots label#dot-6 {
   font-size: 20px;
 }
 
+footer {
+  background-color: black;
+  color: white;
+  font-family: 'Nanum Gothic';
+  font-weight: 700;
+}
+
+.container h1,
+.container h2,
+.container h4,
+.container h5 {font-weight: 700;}
+
 .container #r1 {
   padding-top: 30px; padding-bottom: 30px;
   text-align: center;
@@ -278,7 +283,9 @@ input#img-6:checked ~ .nav-dots label#dot-6 {
 #r2 .introduce {padding-top: 30px; padding-bottom: 30px;}
 @media (min-width: 1880px) {
   #plus-image {height: 800px;}
+  .nav-link .sns {display: none;}
 }
+
 @media (max-width: 1880px) {
   .create .creators {height: 690px;}
   .creator {
@@ -290,6 +297,11 @@ input#img-6:checked ~ .nav-dots label#dot-6 {
     height: 200px;
   }
 }
+
+@media (min-width: 990px) and (max-width: 1880px){
+    .nav-link .sns {display: none;}
+}
+
 @media (max-width: 1200px) {
   .slides {
     width: 700px;
@@ -303,6 +315,13 @@ input#img-6:checked ~ .nav-dots label#dot-6 {
   .creator-char .create-img {height: 130px;}
   .create .creators {height: 550px;}
 }
+
+@media (max-width: 990px) {
+  .nav-item-divider span {display: none;}
+  .nav-link i {display: none;}
+  .nav-link span {display: block; color: black;}
+}
+
 @media (max-width: 747px) {
   .slides {
     width: 400px;
@@ -317,7 +336,4 @@ input#img-6:checked ~ .nav-dots label#dot-6 {
   .create .creators {height: 490px;}
   .create h1, .search h1 {font-size: 25px;}
   .search-inner #create-name {width: 250px;}
-  .nav-item-divider span {display: none;}
-  .nav-link i {display: none;}
-  .d-xl-none {display: block; color: black;}
 }
