@@ -2,8 +2,7 @@ var pass = document.getElementById('all');
 var k = document.querySelectorAll("#search-creator");
 var createname = document.querySelectorAll(".title");
 var error = document.getElementById('search-error');
-var count = 0;
-var scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
 var Newimage = {
   setImage1:function(self, char){
     self.parentNode.getElementsByTagName('div')[0].style.display = char;
@@ -17,15 +16,6 @@ var Newimage = {
   setImage4:function(char) {
     document.getElementById('plus-comment').innerHTML = char;
   }
-}
-
-function Park() {
-    document.getElementById('q1').style.position = 'fixed';
-    document.getElementById('q1').style.width = '100%';
-    document.getElementById('q1').style.top = '0';
-}
-if (scrollPosition > 140){
-  Park();
 }
 
 function selectImg(number) {
@@ -111,7 +101,6 @@ function searchCreate() {
     else if(input == '') {
       error.style.display = 'none';
       Newimage.setImage2('',i);
-      document.write(scrollPosition);
     }
     else if(createname[i].innerHTML.includes(input) || createname[i].innerHTML.toLowerCase().includes(input)) {
       error.style.display = 'none';
@@ -127,6 +116,7 @@ function searchCreate() {
     }
   }
 }
+
 function enterKey() {
   if(window.event.keyCode == 13) {
     searchCreate();

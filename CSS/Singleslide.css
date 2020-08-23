@@ -3,7 +3,7 @@
 
 * {padding: 0; margin: 0;}
 
-html, body {background: #333; font-family: 'Black Han Sans', sans-serif;}
+html, body {font-family: 'Black Han Sans', sans-serif;}
 
 header {background: white;}
 
@@ -27,11 +27,11 @@ nav .star-create {margin: 25px 5%;}
 
 nav h1 {
   font-size: 30px;
-  color: white;
+  color: black;
 }
 .slides {
   padding: 0;
-  width: 70%;
+  width: 75%;
   height: 600px;
   display: block;
   margin: 0 auto;
@@ -84,7 +84,7 @@ nav h1 {
   transition: opacity 0.2s;
 
   color: #FFF;
-  font-size: 120pt;
+  font-size: 90pt;
   text-align: center;
   line-height: 500px;
   font-family: "Varela Round", sans-serif;
@@ -133,7 +133,7 @@ input#img-6:checked ~ .nav-dots label#dot-6 {
 .create {margin: 3% 5%;}
 .create h1 {
   font-size: 30px;
-  color: white;
+  color: black;
 }
 .create .create-pick {list-style: none;}
 .create-pick li {
@@ -144,7 +144,7 @@ input#img-6:checked ~ .nav-dots label#dot-6 {
   margin-left: 5px;
 }
 .create-pick span {
-  color: white;
+  color: black;
   cursor: pointer;
 }
 .create-pick span:hover{
@@ -166,7 +166,7 @@ input#img-6:checked ~ .nav-dots label#dot-6 {
  }
 .creator {
   float: left;
-  color: white;
+  color: black;
   line-height: 30px;
   margin-right: 110px;
   margin-top: 10px;
@@ -190,7 +190,7 @@ input#img-6:checked ~ .nav-dots label#dot-6 {
   white-space: nowrap;
 }
 .creator-profile a {
-  color: white;
+  color: black;
   text-decoration: none;
 }
 
@@ -202,11 +202,11 @@ input#img-6:checked ~ .nav-dots label#dot-6 {
 .search {margin: 3% 5%;}
 .search h1 {
   font-size: 30px;
-  color: white;
+  color: black;
 }
 .search-wrap .search-inner {
   padding: 35px;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid black;
 }
 .search-inner #create-name {
     display: inline-block;
@@ -231,7 +231,7 @@ input#img-6:checked ~ .nav-dots label#dot-6 {
 }
 .search-creator-char {
     position: relative;
-    color: white;
+    color: black;
 }
 .search-creator-char .search-creator-img{
   width: 70%;
@@ -267,10 +267,11 @@ footer {
   font-weight: 700;
 }
 
-.container h1,
-.container h2,
-.container h4,
-.container h5 {font-weight: 700;}
+#foot h1,
+#foot h2,
+#foot h3,
+#foot h4,
+#foot h5 {font-weight: 700;}
 
 .container #r1 {
   padding-top: 30px; padding-bottom: 30px;
@@ -336,4 +337,50 @@ footer {
   .create .creators {height: 490px;}
   .create h1, .search h1 {font-size: 25px;}
   .search-inner #create-name {width: 250px;}
+}
+
+.menu {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.nav-pills a {
+  color: black;
+  background: white;
+}
+
+.jbFixed {
+  position: fixed;
+  top: 0px;
+  width: 70%;
+  z-index: 99;
+}
+
+#c1 .row .media,
+#c2 .row .media {padding: 20px;}
+
+
+#c2 h3,
+#c2 h4,
+#c3 h3,
+#c3 h4 {display: inline;}
+
+#c2 span {float: right;}
+
+.media .curriculum {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  width: 100%;
+}
+
+#c3 .row img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+#c3 .row .media {
+  padding: 20px;
+  padding-left: 55px;
 }
