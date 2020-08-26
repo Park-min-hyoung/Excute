@@ -174,7 +174,19 @@
     <article>
       <section>
         <div class="create">
-          <h1>여러분이 원하는 선생님을 Pick하세요</h1>
+            <h1>여러분이 원하는 선생님을 Pick하세요</h1>
+            <form id="create-search" action="Excute.html" method="post">
+              <div class="search-warp">
+                <div class="search-inner">
+                  <input type="text" name="create-name" id="create-name"
+                  placeholder="크리에이터의 이름을 검색하세요" onkeyup="enterKey();">
+                  <input type="text" id="temp" value="temp" style="display:none;">
+                  <button type="button" class="search-button" onclick="
+                  searchCreate();">검색</button>
+                </div>
+              </div>
+              <hr>
+            </form>
           <div class="create-pick">
             <ul>
               <li id="first-pick"><span onclick="selectImg(1)">전체</span></li>
@@ -184,12 +196,13 @@
               <li><span onclick="selectImg(5)">예능</span></li>
             </ul>
           </div>
+          <h1 id="search-error" style="display: none;">찾으려는 선생님의 이름이 존재하지 않습니다.</h1>
           <div class="creators" id="creators-display">
             <div id="all">
               <div class="creator">
                 <div class="creator-char">
                   <a href="#"><img class="create-img" src="https://yt3.ggpht.com/a/AATXAJxZp3MCJOj1AlnW-L755sKcvzPCOHegS6wuOCNJCg=s900-c-k-c0xffffffff-no-rj-mo" /></a>
-                  <div class="creator-name">홍사운드</div>
+                  <div class="creator-name" id="cn1">홍사운드</div>
                   <div class="creator-field">Muckbang</div>
                 </div>
                 <div class="creator-subscribe">
@@ -207,7 +220,7 @@
               <div class="creator">
                 <div class="creator-char">
                   <a href="#"><img class="create-img" src="https://yt3.ggpht.com/a-/AAuE7mBlSuDdiiWyyJsvMSj9CPgVRImLCwjkgNc2BQ=s800-mo-c-c0xffffffff-rj-k-no" /></a>
-                  <div class="creator-name">제니워니 JeniWoni</div>
+                  <div class="creator-name" id="cn1">제니워니 JeniWoni</div>
                   <div class="creator-field">Kids</div>
                 </div>
                 <div class="creator-subscribe">
@@ -225,7 +238,7 @@
               <div class="creator">
                 <div class="creator-char">
                   <a href="#"><img class="create-img" src="https://yt3.ggpht.com/a/AATXAJzAGhJRXaxZihohn-Ydp7s0jmLkLT28ZOGloycVXg=s800-c-k-c0xffffffff-no-rj-mo" /></a>
-                  <div class="creator-name">임영웅</div>
+                  <div class="creator-name" id="cn1">임영웅</div>
                   <div class="creator-field">Entertainment</div>
                 </div>
                 <div class="creator-subscribe">
@@ -243,7 +256,7 @@
               <div class="creator" id="last-img">
                 <div class="creator-char">
                   <a href="#"><img class="create-img" src="https://yt3.ggpht.com/a/AATXAJySyH4wy3L46RXww1PF2caQjDip1KtV3ICxDEHAkQ=s800-c-k-c0xffffffff-no-rj-mo" /></a>
-                  <div class="creator-name">꽈뚜룹 Quadddurup</div>
+                  <div class="creator-name" id="cn1">꽈뚜룹 Quadddurup</div>
                   <div class="creator-field">Game</div>
                 </div>
                 <div class="creator-subscribe">
@@ -261,7 +274,7 @@
               <div class="creator">
                 <div class="creator-char">
                   <a href="#"><img class="create-img" src="https://yt3.ggpht.com/a/AATXAJwQQVXdrWflFmYRMcebshUdQCnciYqRe961xh6AKw=s800-c-k-c0xffffffff-no-rj-mo" /></a>
-                  <div class="creator-name">Thankyou BUBU</div>
+                  <div class="creator-name" id="cn1">Thankyou BUBU</div>
                   <div class="creator-field">Entertainment</div>
                 </div>
                 <div class="creator-subscribe">
@@ -279,7 +292,7 @@
               <div class="creator">
                 <div class="creator-char">
                   <a href="#"><img class="create-img" src="https://yt3.ggpht.com/a/AGF-l78GyI-m44FmWIcQeeztfGx4MnaP8ILw_BRlig=s800-c-k-c0xffffffff-no-rj-mo" /></a>
-                  <div class="creator-name">감스트GAMST</div>
+                  <div class="creator-name" id="cn1">감스트GAMST</div>
                   <div class="creator-field">Game</div>
                 </div>
                 <div class="creator-subscribe">
@@ -297,7 +310,7 @@
               <div class="creator">
                 <div class="creator-char">
                   <a href="#"><img class="create-img" src="https://yt3.ggpht.com/a/AATXAJxtGDuxHU7PxpaifkdgfSMd8J4hngd8RImfIgxccw=s800-c-k-c0xffffffff-no-rj-mo" /></a>
-                  <div class="creator-name">허팝Heopop</div>
+                  <div class="creator-name" id="cn1">허팝Heopop</div>
                   <div class="creator-field">Entertainment</div>
                 </div>
                 <div class="creator-subscribe">
@@ -315,7 +328,7 @@
               <div class="creator" id="last-img">
                 <div class="creator-char">
                   <a href="#"><img class="create-img" src="https://yt3.ggpht.com/a/AATXAJxGk-cl_4EFdBQltdLB1NE199Ma-obIjpYxvkMLaw=s800-c-k-c0xffffffff-no-rj-mo" /></a>
-                  <div class="creator-name">산적TV 밥굽남</div>
+                  <div class="creator-name" id="cn1">산적TV 밥굽남</div>
                   <div class="creator-field">Muckbang</div>
                 </div>
                 <div class="creator-subscribe">
@@ -335,7 +348,7 @@
                 <div class="creator">
                   <div class="creator-char">
                     <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg" /></a>
-                    <div class="creator-name">Park</div>
+                    <div class="creator-name" id="cn2">Park123</div>
                     <div class="creator-field">Food</div>
                   </div>
                   <div class="creator-subscribe">
@@ -347,7 +360,7 @@
                 <div class="creator">
                   <div class="creator-char">
                     <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg" /></a>
-                    <div class="creator-name">Park</div>
+                    <div class="creator-name" id="cn2">홍사운드</div>
                     <div class="creator-field">Food</div>
                   </div>
                   <div class="creator-subscribe">
@@ -359,7 +372,7 @@
                 <div class="creator">
                   <div class="creator-char">
                     <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg" /></a>
-                    <div class="creator-name">Park</div>
+                    <div class="creator-name" id="cn2">Park</div>
                     <div class="creator-field">Food</div>
                   </div>
                   <div class="creator-subscribe">
@@ -371,7 +384,7 @@
                 <div class="creator" id="last-img">
                   <div class="creator-char">
                     <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg" /></a>
-                    <div class="creator-name">Park</div>
+                    <div class="creator-name" id="cn2">Park</div>
                     <div class="creator-field">Food</div>
                   </div>
                   <div class="creator-subscribe">
@@ -383,7 +396,7 @@
                 <div class="creator">
                   <div class="creator-char">
                     <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg" /></a>
-                    <div class="creator-name">Park</div>
+                    <div class="creator-name" id="cn2">Park</div>
                     <div class="creator-field">Food</div>
                   </div>
                   <div class="creator-subscribe">
@@ -395,7 +408,7 @@
                 <div class="creator">
                   <div class="creator-char">
                     <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg" /></a>
-                    <div class="creator-name">Park</div>
+                    <div class="creator-name" id="cn2">Park</div>
                     <div class="creator-field">Food</div>
                   </div>
                   <div class="creator-subscribe">
@@ -407,7 +420,7 @@
                 <div class="creator">
                   <div class="creator-char">
                     <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg" /></a>
-                    <div class="creator-name">Park</div>
+                    <div class="creator-name" id="cn2">Park</div>
                     <div class="creator-field">Food</div>
                   </div>
                   <div class="creator-subscribe">
@@ -419,7 +432,7 @@
                 <div class="creator" id="last-img">
                   <div class="creator-char">
                     <a href="#"><img class="create-img" src="http://farm9.staticflickr.com/8504/8365873811_d32571df3d_z.jpg" /></a>
-                    <div class="creator-name">Park</div>
+                    <div class="creator-name" id="cn2">Par</div>
                     <div class="creator-field">Food</div>
                   </div>
                   <div class="creator-subscribe">
@@ -826,86 +839,6 @@
           </div>
         </div>
       </section>
-
-      <section>
-        <div class="search">
-          <h1>원하는 선생님을 검색해보세요</h1>
-          <form id="create-search" action="Excute.html" method="post">
-            <div class="search-wrap">
-              <div class="search-inner">
-                <input type="text" name="create-name" id="create-name"
-                placeholder="크리에이터의 이름을 검색하세요" onkeyup="enterKey();">
-                <input type="text" id="temp" value="temp" style="display:none;">
-                <button type="button" class="search-button" onclick="
-                searchCreate();">검색</button>
-              </div>
-            </div>
-          </form>
-          <div class="search-creators-wrap" id="scw">
-            <h1 id="search-error" style="display: none;">찾으려는 선생님의 이름이 존재하지 않습니다.</h1>
-            <div class="row">
-              <div class="col-sm-3" id="search-creator">
-                <div class="search-creator-char">
-                  <div class="search-creator-img">
-                    <img src="https://yt3.ggpht.com/a/AATXAJzK9WgQ68fNPZo_gSISZXUspGW-hDh5uciYqt4EPQ=s800-c-k-c0xffffffff-no-rj-mo" alt="">
-                  </div>
-                  <div class="search-creator-desc">
-                    <div class="title">친절한 뷰티언니쏭냥</div>
-                    <div class="count">
-                      <span>조회수</span>
-                      <span style="font-weight: 700;">30,000,000</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-sm-3" id="search-creator">
-                <div class="search-creator-char">
-                  <div class="search-creator-img">
-                    <img src="https://yt3.ggpht.com/a/AATXAJxz7FnKL1vG_hpRcOSKANsdPkT3lhTQ4rKz7GeSsA=s900-c-k-c0xffffffff-no-rj-mo" alt="">
-                  </div>
-                  <div class="search-creator-desc">
-                    <div class="title">UDT</div>
-                    <div class="count">
-                      <span>조회수</span>
-                      <span style="font-weight: 700;">30,000,000</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-sm-3" id="search-creator">
-                <div class="search-creator-char">
-                  <div class="search-creator-img">
-                    <img src="https://yt3.ggpht.com/a/AATXAJxZp3MCJOj1AlnW-L755sKcvzPCOHegS6wuOCNJCg=s900-c-k-c0xffffffff-no-rj-mo" alt="">
-                  </div>
-                  <div class="search-creator-desc">
-                    <div class="title">홍사운드</div>
-                    <div class="count">
-                      <span>조회수</span>
-                      <span style="font-weight: 700;">30,000,000</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-sm-3" id="search-creator">
-                <div class="search-creator-char">
-                  <div class="search-creator-img">
-                    <img src="https://yt3.ggpht.com/a/AATXAJxu_3ceaYfDYEPKOp8-FIblb_SEuS1qWEOkXOAQGw=s176-c-k-c0x00ffffff-no-rj-mo" alt="">
-                  </div>
-                  <div class="search-creator-desc">
-                    <div class="title">박병진 용사</div>
-                    <div class="count">
-                      <span>조회수</span>
-                      <span style="font-weight: 700;">30,000,000</span>
-                    </div>
-                  </div>
-                </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </article>
     <footer>
         <div class="container" id="foot">
@@ -925,14 +858,7 @@
               <p>회사명 : ㈜YOOHOO | 대표이사 : 박민형 | 호스팅사업자 : (주)YOOHOO<br>
               주소 : (06223) 울산 동구 화문로 70, 현대비치 105동 1601호<br>
               개인정보관리책임자 : 박민형(qkralswgud1324@naver.com)<br><br>
-
-              법적고지<br>
-              (주YOOHOO는 결제정보의 중개서비스 또는 통신판매중개시스템의 제공자로서,<br>
-              통신판매의 당사자가 아니며 상품의 주문, 배송 및 환불 등과 관련한 의무와 책임은 각 판매자에게 있습니다.<br><br>
-
-              100%정품<br>
-              YOOHOO에서 판매되는 모든 브랜드 제품은 정식제조, 정식수입원을 통해 유통되는 100%정품입니다.
-              </p><br>
+              </p>
               <p style="color: #808080;">이용약관 ㅣ 개인정보처리방침 ㅣ 사업자정보확인</p>
             </div>
             <div class="col-sm-4" style="text-align: center;"><h1>YOUHOO</h1></div>

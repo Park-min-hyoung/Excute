@@ -1,7 +1,9 @@
 var pass = document.getElementById('all');
-var k = document.querySelectorAll("#search-creator");
-var createname = document.querySelectorAll(".title");
+var k = document.querySelectorAll(".creator");
+var createname = document.querySelectorAll(".creator-name");
 var error = document.getElementById('search-error');
+var plusbutton = document.getElementById('plus-comment');
+
 
 var Newimage = {
   setImage1:function(self, char){
@@ -22,6 +24,12 @@ function selectImg(number) {
   pass.style.display = "none";
   Newimage.setImage3('none');
   Newimage.setImage4('더 보기');
+
+  error.style.display = 'none';
+  for(var i = 0; i < k.length; i++){
+    Newimage.setImage2('',i);
+  }
+
   if(number == 1){
     pass = document.getElementById('all');
     document.getElementById('p1').src = "http://farm9.staticflickr.com/8072/8346734966_f9cd7d0941_z.jpg";
@@ -92,6 +100,7 @@ function plusPage(self) {
 function searchCreate() {
   var input = document.getElementById('create-name').value;
   count = 0;
+  plusbutton.style.display = 'none';
   for(var i = 0; i < k.length; i++){
     if((k[i].style.display == '' && createname[i].innerHTML == input) || (k[i].style.display == 'none' && createname[i].innerHTML == input)) {
       error.style.display = 'none';
@@ -101,6 +110,7 @@ function searchCreate() {
     else if(input == '') {
       error.style.display = 'none';
       Newimage.setImage2('',i);
+      plusbutton.style.display = '';
     }
     else if(createname[i].innerHTML.includes(input) || createname[i].innerHTML.toLowerCase().includes(input)) {
       error.style.display = 'none';

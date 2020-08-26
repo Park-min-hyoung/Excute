@@ -23,7 +23,7 @@ header {background: white;}
 
 .dropdown-toggle:hover {cursor: pointer;}
 
-nav .star-create {margin: 25px 5%;}
+nav .star-create {margin: 25px 15.8%;}
 
 nav h1 {
   font-size: 30px;
@@ -131,13 +131,24 @@ input#img-6:checked ~ .nav-dots label#dot-6 {
     background-color: yellow;
 }
 .create {margin: 3% 5%;}
+
 .create h1 {
   font-size: 30px;
   color: black;
+  margin: 0 11.8%;
 }
-.create .create-pick {list-style: none;}
+
+.create form {
+  margin: 10px 11.8%;
+  text-align: right;
+}
+
+.create .create-pick {
+  list-style: none;
+  margin: 0 11.8%;
+}
 .create-pick li {
-  margin: 15px 20px;
+  margin: 15px 15px;
   display: inline-block;
 }
 .create-pick #first-pick {
@@ -168,12 +179,13 @@ input#img-6:checked ~ .nav-dots label#dot-6 {
   float: left;
   color: black;
   line-height: 30px;
-  margin-right: 110px;
+  margin-left: 45px;
+  margin-right: 45px;
   margin-top: 10px;
   text-align: center;
   overflow: hidden;
 }
-#last-img {margin-right: 0;}
+
 .creator-char .create-img {
   width: 250px;
   height: 250px;
@@ -282,9 +294,11 @@ footer {
   height: 40px;
 }
 #r2 .introduce {padding-top: 30px; padding-bottom: 30px;}
-@media (min-width: 1880px) {
+
+@media (min-width: 1880px) and (max-width: 1910px) {
   #plus-image {height: 800px;}
   .nav-link .sns {display: none;}
+  #last-img {margin-right: 0;}
 }
 
 @media (max-width: 1880px) {
@@ -292,6 +306,7 @@ footer {
   .creator {
     width: 25%;
     margin-right: 0;
+    margin-left: 0;
   }
   .creator-char .create-img {
     width: 80%;
