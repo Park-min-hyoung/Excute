@@ -10,6 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
     <style>
       html, body {background: white;}
+
+      @media (max-width: 1200px) {
+        #payment {display: none;}
+      }
     </style>
   </head>
   <body>
@@ -81,10 +85,10 @@
     </header>
     <section class="menu">
       <nav class="nav nav-pills nav-fill">
-        <a class="nav-item nav-link active" id="menu1" href="#">수업소개</a>
-        <a class="nav-item nav-link" id="menu2" href="#">커리큘럼</a>
-        <a class="nav-item nav-link" id="menu3" href="#">리뷰</a>
-        <a class="nav-item nav-link" id="menu4" href="#">커뮤니티</a>
+        <a class="nav-item nav-link active" id="menu1" href="#c1">수업소개</a>
+        <a class="nav-item nav-link" id="menu2" href="#c2">커리큘럼</a>
+        <a class="nav-item nav-link" id="menu3" href="#c3">리뷰</a>
+        <a class="nav-item nav-link" id="menu4" href="#c4">커뮤니티</a>
       </nav>
       <hr>
       <div class="container" id="c1">
@@ -224,15 +228,17 @@
       </div>
     </section>
 
+    <button type="button" id="top-button" onClick="javascript:window.scrollTo(0,0)">&Lambda;</button>
+
     <footer>
         <div class="container" id="foot">
           <div class="row" id="r1">
             <div class="col-sm-3"><h2 style>010-8309-9634</h2><h5>영업시간 : 09:00 ~ 18:00</h5><h5>점심시간 : 12:00 ~ 13:00</h5></div>
             <div class="col-sm-5"><h2>SNS</h2>
               <div class="sns-img">
-                <a href="#"><img src="https://www.hiver.co.kr/static/2.48.3/images/icon_footer_03.png"></a><span>페이스북</span>&nbsp;&nbsp;&nbsp;
-                <a href="#"><img src="https://www.hiver.co.kr/static/2.48.3/images/icon_footer_04.png"></a>&nbsp;<span>인스타그램</span>&nbsp;&nbsp;&nbsp;
-                <a href="#"><img src="https://www.hiver.co.kr/static/2.48.3/images/icon_footer_02.png"></a>&nbsp;<span>카카오톡</span>
+                <a href="https://www.facebook.com/profile.php?id=100004984592552"><img src="https://www.hiver.co.kr/static/2.48.3/images/icon_footer_03.png"></a><span>페이스북</span>&nbsp;&nbsp;&nbsp;
+                <a href="https://www.instagram.com/?hl=ko"><img src="https://www.hiver.co.kr/static/2.48.3/images/icon_footer_04.png"></a>&nbsp;<span>인스타그램</span>&nbsp;&nbsp;&nbsp;
+                <a href="https://www.kakaocorp.com/service/KakaoTalk"><img src="https://www.hiver.co.kr/static/2.48.3/images/icon_footer_02.png"></a>&nbsp;<span>카카오톡</span>
               </div>
             </div>
             <div class="col-sm-4"><h2>Copyright © 2020</h2><h4>박민형</h4></div>
@@ -242,20 +248,33 @@
               <p>회사명 : ㈜YOOHOO | 대표이사 : 박민형 | 호스팅사업자 : (주)YOOHOO<br>
               주소 : (06223) 울산 동구 화문로 70, 현대비치 105동 1601호<br>
               개인정보관리책임자 : 박민형(qkralswgud1324@naver.com)<br><br>
-
-              법적고지<br>
-              (주YOOHOO는 결제정보의 중개서비스 또는 통신판매중개시스템의 제공자로서,<br>
-              통신판매의 당사자가 아니며 상품의 주문, 배송 및 환불 등과 관련한 의무와 책임은 각 판매자에게 있습니다.<br><br>
-
-              100%정품<br>
-              YOOHOO에서 판매되는 모든 브랜드 제품은 정식제조, 정식수입원을 통해 유통되는 100%정품입니다.
-              </p><br>
+              </p>
               <p style="color: #808080;">이용약관 ㅣ 개인정보처리방침 ㅣ 사업자정보확인</p>
             </div>
-            <div class="col-sm-4" style="text-align: center;"><h1>YOUHOO</h1></div>
+            <div class="col-sm-4" style="text-align: center;"><a href="index.html"><h1>YOUHOO</h1></a></div>
           </div>
         </div>
     </footer>
+
+    <div class="card" id="payment" style="width: 18rem; display: none;">
+      <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRlllVVILzW__O-coI6lUrCSFr6M5_s1xrAZw&usqp=CAU" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">100만 구독자를 만드는 유튜브 채널의 비밀</h5>
+        <p class="card-text">12개월 할부<span style="float: right;">월 22,066원</span></p>
+        <hr>
+        <p class="card-text">총 할인액<span style="float: right;">1,000,000원</span></p>
+        <a href="#"><p class="card-text" id="button">할인쿠폰 받기&nbsp;<i class="fas fa-download"></i></p></a>
+        <hr>
+        <span class="card-text"><i class="fab fa-youtube"></i>&nbsp;콘텐츠 이용권&nbsp;&nbsp;&nbsp;</span>
+        <span class="card-text"><i class="fas fa-users"></i></i>&nbsp;입문자 대상</span><br>
+        <span class="card-text"><i class="fas fa-thumbs-up"></i>&nbsp;강의만족도 96%</span>
+        <hr>
+        <a href="#"><p class="card-text" id="button" style="background: black;"><i class="fas fa-heart"></i>&nbsp;5961</i></p></a>
+        <a href="#"><p class="card-text" id="button" style="background: black;"><i class="fas fa-share-alt"></i>&nbsp;공유하기</i></p></a>
+        <a href="#"><p class="card-text" id="button"><i class="fas fa-chalkboard-teacher"></i>&nbsp;클래스 신청하기</i></p></a>
+      </div>
+    </div>
+
     <script src="js/Excute.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="js/bootstrap.js"></script>
@@ -268,19 +287,32 @@
         var curriculum = $('#c2').offset();
         var review = $('#c3').offset();
         var community = $('#c4').offset();
+        var mql = window.matchMedia("screen and (max-width: 1400px)");
 
         $(window).scroll(function() {
           if ($(document).scrollTop() > jbOffset.top ) {
             $('.nav-pills' ).addClass('jbFixed');
             $('#menu1').addClass('active');
+            if (mql.matches){
+              $('#payment').css("display", "none");
+            }
+            else {
+              $('#payment').css({
+                "display" : "block",
+                "position" : "fixed",
+                "top" : "50px",
+                "right" : "55px"
+              });
+            }
           }
           else {
             $('.nav-pills').removeClass('jbFixed');
+            $('#payment').css("display", "none");
           }
         });
 
         $(window).scroll(function() {
-          if ($(document).scrollTop() > curriculum.top ) {
+          if ($(document).scrollTop() > curriculum.top - 100) {
             $('#menu2').addClass('active');
             $('#menu1').removeClass('active');
           }
@@ -290,7 +322,7 @@
         });
 
         $(window).scroll(function() {
-          if ($(document).scrollTop() > review.top ) {
+          if ($(document).scrollTop() > review.top - 150) {
             $('#menu3').addClass('active');
             $('#menu2').removeClass('active');
           }
@@ -300,7 +332,7 @@
         });
 
         $(window).scroll(function() {
-          if ($(document).scrollTop() > community.top - 100) {
+          if ($(document).scrollTop() > community.top - 350) {
             $('#menu4').addClass('active');
             $('#menu3').removeClass('active');
           }
@@ -308,7 +340,7 @@
             $('#menu4').removeClass('active');
           }
         });
-      } );
+      });
     </script>
   </body>
 </html>

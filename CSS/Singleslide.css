@@ -293,11 +293,96 @@ footer {
   width: 40px;
   height: 40px;
 }
-#r2 .introduce {padding-top: 30px; padding-bottom: 30px;}
+
+#r2 a {
+  text-decoration: none;
+  color: white;
+}
+
+
+.menu {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.nav-pills a {
+  color: black;
+  background: white;
+}
+
+.jbFixed {
+  position: fixed;
+  top: 0px;
+  width: 80%;
+  margin: 0 auto;
+  z-index: 99;
+}
+
+#c1 .row .media,
+#c2 .row .media {padding: 20px;}
+
+
+#c2 h3,
+#c2 h4,
+#c3 h3,
+#c3 h4 {display: inline;}
+
+#c2 span {float: right;}
+
+.media .curriculum {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  width: 100%;
+}
+
+#c3 .row img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+#c3 .row .media {
+  padding: 20px;
+  padding-left: 55px;
+}
+
+#top-button {
+  position: relative;
+  float: right;
+  font-size: 25px;
+  bottom: 55px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  border: 0;
+  background: black;
+  color: white;
+  font-weight: 600;
+}
+
+#payment .card-body a {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  border: 0;
+}
+
+.card-body #button
+ {
+  width: 250px;
+  padding: 15px 0;
+  margin: 15px 0;
+  background: red;
+  font-size: 20px;
+}
+
+@media (min-width: 1880px) {
+  .nav-link .sns {display: none;}
+}
 
 @media (min-width: 1880px) and (max-width: 1910px) {
   #plus-image {height: 800px;}
-  .nav-link .sns {display: none;}
   #last-img {margin-right: 0;}
 }
 
@@ -314,8 +399,10 @@ footer {
   }
 }
 
-@media (min-width: 990px) and (max-width: 1880px){
-    .nav-link .sns {display: none;}
+@media (min-width: 990px) and (max-width: 1880px){.nav-link .sns {display: none;}}
+@media (min-width: 1400px) and (max-width: 1880px){
+  .menu {width: 50%;}
+  .jbFixed {width: 50%;}
 }
 
 @media (max-width: 1200px) {
@@ -352,50 +439,4 @@ footer {
   .create .creators {height: 490px;}
   .create h1, .search h1 {font-size: 25px;}
   .search-inner #create-name {width: 250px;}
-}
-
-.menu {
-  width: 70%;
-  margin: 0 auto;
-}
-
-.nav-pills a {
-  color: black;
-  background: white;
-}
-
-.jbFixed {
-  position: fixed;
-  top: 0px;
-  width: 70%;
-  z-index: 99;
-}
-
-#c1 .row .media,
-#c2 .row .media {padding: 20px;}
-
-
-#c2 h3,
-#c2 h4,
-#c3 h3,
-#c3 h4 {display: inline;}
-
-#c2 span {float: right;}
-
-.media .curriculum {
-  text-decoration: none;
-  color: black;
-  display: flex;
-  width: 100%;
-}
-
-#c3 .row img {
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
-}
-
-#c3 .row .media {
-  padding: 20px;
-  padding-left: 55px;
 }
