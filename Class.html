@@ -75,8 +75,8 @@
               <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink-4" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false" style="color: black;">접속하기</a>
               <div class="dropdown-menu dropdown-menu-right dropdown-info" aria-labelledby="navbarDropdownMenuLink-4">
-                <a class="dropdown-item" href="#">로그인</a>
-                <a class="dropdown-item" href="#">회원가입</a>
+                <a class="dropdown-item" href="Login.html">로그인</a>
+                <a class="dropdown-item" href="Register.html">회원가입</a>
               </div>
             </li>
           </ul>
@@ -275,6 +275,19 @@
       </div>
     </div>
 
+    <div class="space" style="width: 100%; height:162px; display: none;"></div>
+
+    <div class="card" id="m-payment" style="display: none;">
+      <div class="card-body">
+        <h5 class="card-title">100만 구독자를 만드는 유튜브 채널의 비밀</h5>
+        <p class="card-text" style="display: inline;">12개월 할인&nbsp;&nbsp;&nbsp;월 22,066원</p><br>
+        <p class="card-text" style="display: inline;">총 할인액&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1,000,000원</p>
+        <a href="#"><p class="card-text" id="m-button" style="background: black;"><i class="fas fa-heart"></i>&nbsp;5961</i></p></a>
+        <a href="#"><p class="card-text" id="m-button" style="background: black;"><i class="fas fa-share-alt"></i>&nbsp;공유하기</i></p></a>
+        <a href="#"><p class="card-text" id="m-button"><i class="fas fa-chalkboard-teacher"></i>&nbsp;클래스 신청하기</i></p></a>
+      </div>
+    </div>
+
     <script src="js/Excute.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="js/bootstrap.js"></script>
@@ -288,6 +301,18 @@
         var review = $('#c3').offset();
         var community = $('#c4').offset();
         var mql = window.matchMedia("screen and (max-width: 1400px)");
+
+        $(window).resize(function() {
+          if (mql.matches){
+            $('#payment').css("display", "none");
+            $('#m-payment').css("display", "block");
+            $('.space').css("display", "block");
+          }
+          else {
+            $('#m-payment').css("display", "none");
+            $('.space').css("display", "none");
+          }
+        });
 
         $(window).scroll(function() {
           if ($(document).scrollTop() > jbOffset.top ) {

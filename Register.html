@@ -8,13 +8,6 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/Singleslide.css">
     <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
-    <style>
-      html, body {background: white;}
-
-      @media (max-width: 1200px) {
-        #payment {display: none;}
-      }
-    </style>
   </head>
   <body>
     <header>
@@ -84,7 +77,40 @@
       </nav>
     </header>
     <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card card-signin my-5">
+              <div class="card-body">
+                <h5 class="card-title text-center">회원가입</h5>
+                <form class="form-signin">
+                  <div class="form-label-group">
+                    <input type="text" id="inputId" class="form-control" placeholder="Email address" required autofocus>
+                    <label for="inputId">아이디를 입력하세요</label>
+                  </div>
 
+                  <div class="form-label-group">
+                    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                    <label for="inputEmail">이메일주소를 입력하세요</label>
+                  </div>
+
+                  <div class="form-label-group">
+                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                    <label for="inputPassword">비밀번호를 입력하세요</label>
+                  </div>
+
+                  <div class="form-label-group">
+                    <input type="password" id="passwordConfirm" class="form-control" placeholder="Password" required>
+                    <label for="passwordConfirm">비밀번호를 한번 더 입력하세요</label>
+                  </div><br>
+
+                  <button class="btn btn-lg btn-success btn-block text-uppercase" type="submit" style="font-size: 20px; font-weight: 500;">회원가입</button>
+                  <a href="Login.html" class="btn btn-lg btn-primary btn-block text-uppercase" style="font-size: 20px; font-weight: 500; color: white;">로그인</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <button type="button" id="top-button" onClick="javascript:window.scrollTo(0,0)">&Lambda;</button>
