@@ -179,8 +179,8 @@ input#img-6:checked ~ .nav-dots label#dot-6 {
   float: left;
   color: black;
   line-height: 30px;
-  margin-left: 45px;
-  margin-right: 45px;
+  margin-left: 35px;
+  margin-right: 35px;
   margin-top: 10px;
   text-align: center;
   overflow: hidden;
